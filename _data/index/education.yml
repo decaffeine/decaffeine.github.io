@@ -1,8 +1,9 @@
-- name: Massachusets Instutite of Technology
-  link: http://web.mit.edu/
-  date: 2011 - <i class="fa fa-clock-o" aria-hidden="true" title="Until Now"></i>
-  descr: <br> (expected graduation in 2019)
+- name: 연세대학교
+  link: http://vcc.yonsei.ac.kr
+  date: 2014 - 2016
+  descr: 인지과학 석사
 
-- name: Harvard
-  link: http://www.harvard.edu/
-  date: 2007 - 2011
+- name: 연세대학교
+  link: http://www.yonsei.ac.kr
+  date: 2010 - 2014
+  descr: 심리학, 응용통계학 학사
