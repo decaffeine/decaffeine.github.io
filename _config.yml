@@ -3,8 +3,8 @@
 # Site wide configuration
 ####################################
 #
-title: Leonids
-email:
+title: Hello tech!
+email: @decaffeine12@gmail.com
 description: A simple and awesome blog theme powered by jekyll.
 url: # the base hostname & protocol for your site
 keywords: ["blog", "jekyll"]
@@ -35,8 +35,8 @@ kramdown:
 owner:
   name: Leonids
   avatar: leonids-logo.png
-  job: "A jekyll theme"
-  bio: "A simple and awesome blog theme powered by jekyll."
+  job: "@decaffeine의 기술 블로그"
+  bio: "SUDO 맛있는거 먹자"
   email:
   disqus-shortname:
   twitter: #username
