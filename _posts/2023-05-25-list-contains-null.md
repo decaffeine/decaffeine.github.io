@@ -20,7 +20,8 @@ public boolean isXXX() {
 - List의 contains 상단의 주석을 보면 다음과 같다.  
 
 ```java
-  Returns true if this list contains the specified element. More formally, returns true if and only if this list contains at least one element e such that Objects.equals(o, e).
+  Returns true if this list contains the specified element. 
+        More formally, returns true if and only if this list contains at least one element e such that Objects.equals(o, e).
   Params:
   o – element whose presence in this list is to be tested
   Returns:
@@ -73,7 +74,8 @@ public boolean isXXX() {
         assertThat(testList.contains(null)).isEqualTo(false);
     }
 ```
-- list에 null이 이미 들어있는 경우 contains(null) 해도 NPE가 발생하지 않는다. (contains의 설명과 일치한다.)
+- list에 null이 이미 들어있는 경우에는 contains(null) 해도 NPE가 발생하지 않는다. (contains의 설명과 일치한다.)
+- Arrays.asList로 생성된 리스트는 ``` new ArrayList<>();``` 로 생성되고, mutable하므로 contains(null) 해도 NPE가 발생하지 않는다.
 
 ```java 
         @Test
