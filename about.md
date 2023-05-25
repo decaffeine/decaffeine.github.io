@@ -3,6 +3,4 @@ layout: post
 title: About
 ---
 
-This is an example page!
-
-Actually, it has the same layout of a post...
+커머스에서 일하고 있는 백엔드 개발자입니다.
