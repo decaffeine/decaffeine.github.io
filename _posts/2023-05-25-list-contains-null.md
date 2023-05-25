@@ -73,7 +73,7 @@ public boolean isXXX() {
         assertThat(testList.contains(null)).isEqualTo(false);
     }
 ```
-- list에 null이 이미 들어있는 경우 contains(null) 해도 NPE가 방지하지 않는다. (contains의 설명과 일치한다.)
+- list에 null이 이미 들어있는 경우 contains(null) 해도 NPE가 발생하지 않는다. (contains의 설명과 일치한다.)
 
 ```java 
         @Test
