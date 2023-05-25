@@ -4,29 +4,32 @@ author: Hyejin Kim
 tags: [java, list, null]
 ---
 
-### 발생한 오류
-- 아래와 같은 코드에서 value가 null일 때 NullPointerException이 발생하였다.
-```java 
+### 발생한 오류  
+- 아래와 같은 코드에서 value가 null일 때 NullPointerException이 발생하였다.  
+
+```java
 public boolean isXXX() {
     return List.of("A", "B").contains(value);
 }
 
 ```
+  
+  
+### 원인 파악  
+- null에 직접 접근한 것이 아닌, List에 null이 있느냐 없느냐를 판단하는 코드라 NPE가 발생할 것이라고 예측하지 못했다.  
+- List의 contains 상단의 주석을 보면 다음과 같다.  
 
-### 원인 파악 
-- null에 직접 접근한 것이 아닌, List에 null이 있느냐 없느냐를 판단하는 코드라 NPE가 발생할 것이라고 예측하지 못했다.
-- List의 contains 상단의 주석을 보면 다음과 같다.
 ```java
-Returns true if this list contains the specified element. More formally, returns true if and only if this list contains at least one element e such that Objects.equals(o, e).
-Params:
-o – element whose presence in this list is to be tested
-Returns:
-true if this list contains the specified element
-Throws:
-ClassCastException – if the type of the specified element is incompatible with this list (optional)
-NullPointerException – if the specified element is null and this list does not permit null elements (optional)
-
-        boolean contains(Object o);
+  Returns true if this list contains the specified element. More formally, returns true if and only if this list contains at least one element e such that Objects.equals(o, e).
+  Params:
+  o – element whose presence in this list is to be tested
+  Returns:
+  true if this list contains the specified element
+  Throws:
+  ClassCastException – if the type of the specified element is incompatible with this list (optional)
+  NullPointerException – if the specified element is null and this list does not permit null elements (optional)
+  
+          boolean contains(Object o);
 ```
 
 - o가 null이고 *list가 null을 허용하지 않을 때* NPE를 발생시킬 수 있다고 되어 있다.
