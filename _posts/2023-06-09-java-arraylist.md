@@ -23,7 +23,7 @@ transient Object[] elementData; // non-private to simplify nested class access
 private static final Object[] DEFAULTCAPACITY_EMPTY_ELEMENTDATA = {};
 
 ```
-	- 일단 new ArrayList<>() 하면 Object[] 인 elementData가 초기화되고, 배열에 값이 저장되므로
+- 일단 new ArrayList<>() 하면 Object[] 인 elementData가 초기화되고, 배열에 값이 저장되므로
 > ArrayList는 배열로 구현되어 있다. (O)
 
 ### 배열의 용량이 꽉 찼을 때
