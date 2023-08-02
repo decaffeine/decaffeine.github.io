@@ -57,9 +57,9 @@ class ExpressionEvalulatorTest {
 ### 값을 비교하는 로직
 - 저 비교 과정을 디버깅해 보면 Mybatis 내부적으로 Ognl이라는 라이브러리를 사용한다.
 - OgnlOps의 compareWithConversion 이라는 메소드 내부를 보면 여러 가지 케이스에 대해 비교하다가, 제일 마지막 케이스에는 값을 모두 double 로 변환해서 비교하는 것을 확인할 수 있다.
-![ognlops](./img/mybatis-01.png)
+![ognlops](./images/mybatis-01.png)
 - 그런데 이 doubleValue는 놀랍게도 파라미터의 길이가 0이면 0.0D로 값을 변환한다.
-![doubleValue](./img/mybatis-02.png)
+![doubleValue](./images/mybatis-02.png)
 
 - 그래서 위의 identityNo (long type 0) 과 ''.toString (String -> doubleValue를 통해 0으로 변환됨)이 동일하다는 결과가 나오게 되는 것이다.
 
